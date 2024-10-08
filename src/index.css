@@ -1,0 +1,221 @@
+input, select, textarea, button {
+    font-family: inherit;
+}
+
+body {
+    background: linear-gradient(to bottom, #517FF6, #253663);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jost", sans-serif;
+}
+
+.page-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 1200px;
+    border-radius: 30px;
+    border: solid 1px;
+    padding: 50px;
+}
+
+.page-container__header {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 42px;
+}
+
+.page-container__toolbar {
+    margin-bottom: 50px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.toolbar__right {
+    gap: 20px;
+    display: flex;
+}
+
+.toolbar__main-button {
+    min-width: 450px;
+}
+
+.toolbar__main-button:visited{
+    color: inherit;
+}
+
+.toolbar__secondary-button {
+    min-width: 180px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 30px;
+    line-height: 60px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.button_active {
+    background-color: #517ff6;
+    color: #fff;
+}
+
+.button_size_small {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 6px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.button_lined {
+    border: solid 1px #000;
+}
+
+.page-form__button {
+    min-width: 215px;
+}
+
+.page-form__actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.table {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 0 30px;
+    table-layout: fixed;
+    width: 100%;
+
+}
+
+.table__cell {
+    font-weight: normal;
+    padding: 10px 30px;
+    vertical-align: top;
+}
+
+.table__cell_header {
+    font-size: 24px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.table__cell_centered {
+    text-align: center;
+}
+
+.table__cell_action {
+    width: 42px;
+    padding: 10px 0;
+}
+
+.table__cell_wide {
+    width: 20%;
+}
+
+.page-form {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 30px 50px 62px;
+}
+
+.page-form__header {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.page-form__input {
+    margin-bottom: 33px;
+}
+
+.page-form__actions {
+    margin-top: 60px;
+}
+
+.field__label {
+    font-size: 24px;
+    line-height: 33px;
+    width: 165px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.field__control {
+    width: 330px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.input__input {
+    box-sizing: border-box;
+    padding: 4px 0 4px 8px;
+}
+
+.textarea__textarea {
+    box-sizing: border-box;
+    resize: vertical;
+    padding: 4px 0 0 8px;
+}
+
+.select__select {
+    box-sizing: border-box;
+    width: 330px;
+    padding: 4px 0 4px 8px;
+}
+
+.range__input {
+    -webkit-appearance: none;
+    padding: 0;
+    height: 5px;
+    border-radius: 5px;
+    background: #d9d9d9;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    box-sizing: border-box;
+    width: 330px;
+}
+
+.range__input:hover {
+    opacity: 1;
+}
+
+.range__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #9c9c9c;
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My project</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
+</head>
+<body>
+
+<div class="page-container">
+    <h2 class="page-container__header">React To-Do List</h2>
+    <div class="page-container__content">
+        <form class="page-form">
+            <h3 class="page-form__header">Add a new to-do</h3>
+
+            <div class="input">
+                <div class="page-form__input">
+                <div class="field">
+                    <label class="field__label" for="name">Name</label>
+                    <input id="name" name="name" class="field__control input__input" type="text"
+                           placeholder="name for the task you’re going to do">
+                </div>
+            </div>
+            </div>
+
+
+            <div class="textarea">
+                <div class="page-form__input">
+                <div class="field">
+                    <label class="field__label" for="description">Description</label>
+                    <textarea id="description" name="description" rows="4"
+                              class="field__control textarea__textarea" placeholder="a short description of the task - can be omitted"></textarea>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="input">
+                <div class="page-form__input">
+                <div class="field">
+                    <label class="field__label" for="category">Category</label>
+                    <input id="category" name="category" class="field__control input__input" type="text"
+                           placeholder="e.g. household, school, work">
+                </div>
+            </div>
+            </div>
+
+            <div class="input">
+                <div class="page-form__input">
+                <div class="field">
+                    <label class="field__label" for="date">Date</label>
+                    <input id="date" name="date" class="field__control input__input" type="date">
+                </div>
+            </div>
+            </div>
+
+            <div class="input">
+                <div class="page-form__input">
+                <div class="field">
+                    <label class="field__label" for="time">Time</label>
+                    <input id="time" name="time" class="field__control input__input" type="time">
+                </div>
+            </div>
+            </div>
+
+            <div class="select">
+                <div class="page-form__input">
+                <div class="field">
+                    <label class="field__label" for="priority">Priority</label>
+                    <select id="priority" name="priority" class="field__control select__select">
+                        <option value="" disabled selected>select from dropdown</option>
+                        <option value="high">High</option>
+                        <option value="middle">Middle</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+
+            <div class="range">
+                <div class="page-form__input">
+                <div class="field">
+                    <label class="field__label" for="range">Fulfillment</label>
+                    <input id="range" name="range" class="field__control range__input" type="range">
+                </div>
+            </div>
+            </div>
+
+            <div class="page-form__actions">
+                <button class="button button_active page-form__button">Save</button>
+                <button class="button button_lined page-form__button">Cancel</button>
+            </div>
+</form>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+<!-- тут будет блок формы -->
+
+<!-- ДЛЯ ДАТЫ сделать через Java scrip min="today" сделать текст внутри поля с помощью onblur onfocus-->
+<!-- конец блока формы -->

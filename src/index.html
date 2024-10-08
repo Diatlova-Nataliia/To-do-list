@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My project</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap">
+</head>
+<body>
+<div class="page-container">
+    <h2 class="page-container__header">React To-Do List</h2>
+    <div class="page-container__content">
+        <div class="toolbar page-container__toolbar">
+            <div class="toolbar__left">
+                <a href="form.html" class="button toolbar__main-button" id="add-task">Add a new to-do</a>
+            </div>
+            <div class="toolbar__right">
+                <button class="button button_active toolbar__secondary-button">All</button>
+                <button class="button toolbar__secondary-button">To-do</button>
+                <button class="button toolbar__secondary-button">Completed</button>
+            </div>
+        </div>
+            <table class="table">
+                <tr class="table__row">
+                    <th class="table__cell table__cell_header">Task</th>
+                    <th class="table__cell table__cell_header table__cell_wide">Description</th>
+                    <th class="table__cell table__cell_header">Category</th>
+                    <th class="table__cell table__cell_header">When</th>
+                    <th class="table__cell table__cell_header">Priority</th>
+                    <th class="table__cell table__cell_header">Fulfillment</th>
+                    <th class="table__cell table__cell_header table__cell_action"></th>
+                    <th class="table__cell table__cell_header table__cell_action"></th>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__cell">Learn-React</td>
+                    <td class="table__cell table__cell_wide">Managing State, Escape Hatches, Effects</td>
+                    <td class="table__cell table__cell_centered">Programming</td>
+                    <td class="table__cell table__cell_centered">-</td>
+                    <td class="table__cell table__cell_centered">High</td>
+                    <td class="table__cell table__cell_centered">30%</td>
+                    <td class="table__cell table__cell_action">
+                        <button class="button button_size_small button_type_outline">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 26.25V24.0312L21.75 17.2812L23.9688 19.5L17.2188 26.25H15ZM3.75 19.6875V17.8125H13.125V19.6875H3.75ZM25.3125 18.1562L23.0938 15.9375L24 15.0312C24.1667 14.8646 24.3854 14.7812 24.6563 14.7812C24.9271 14.7812 25.1458 14.8646 25.3125 15.0312L26.2188 15.9375C26.3854 16.1042 26.4688 16.3229 26.4688 16.5938C26.4688 16.8646 26.3854 17.0833 26.2188 17.25L25.3125 18.1562ZM3.75 14.5312V12.6562H18.4375V14.5312H3.75ZM3.75 9.375V7.5H18.4375V9.375H3.75Z"
+                                      fill="black" fill-opacity="0.5"/>
+                            </svg>
+
+                        </button>
+                    </td>
+                    <td class="table__cell table__cell_action">
+                        <button class="button button_size_small button_type_outline">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5292 19.5125L14 15.9833L17.5 19.5125L18.8708 18.1125L15.4 14.5833L18.8708 11.0542L17.5 9.65416L14 13.1833L10.5292 9.65416L9.12916 11.0542L12.6292 14.5833L9.12916 18.1125L10.5292 19.5125ZM7.61249 24.7333C7.14582 24.7333 6.73749 24.5583 6.38749 24.2083C6.03749 23.8583 5.86249 23.45 5.86249 22.9833V6.35833H4.66666V4.60833H10.15V3.73333H17.85V4.60833H23.3333V6.35833H22.1375V22.9833C22.1375 23.45 21.9625 23.8583 21.6125 24.2083C21.2625 24.5583 20.8542 24.7333 20.3875 24.7333H7.61249ZM20.3875 6.35833H7.61249V22.9833H20.3875V6.35833Z"
+                                      fill="black" fill-opacity="0.5"/>
+                            </svg>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__cell">Shopping</td>
+                    <td class="table__cell table__cell_wide">Potatoes-Onions-Eggs-Olive-Oil</td>
+                    <td class="table__cell table__cell_centered">Household</td>
+                    <td class="table__cell table__cell_centered">data</td>
+                    <td class="table__cell table__cell_centered">High</td>
+                    <td class="table__cell table__cell_centered">0%</td>
+                    <td class="table__cell table__cell_action">
+                        <button class="button button_size_small button_type_outline">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 26.25V24.0312L21.75 17.2812L23.9688 19.5L17.2188 26.25H15ZM3.75 19.6875V17.8125H13.125V19.6875H3.75ZM25.3125 18.1562L23.0938 15.9375L24 15.0312C24.1667 14.8646 24.3854 14.7812 24.6563 14.7812C24.9271 14.7812 25.1458 14.8646 25.3125 15.0312L26.2188 15.9375C26.3854 16.1042 26.4688 16.3229 26.4688 16.5938C26.4688 16.8646 26.3854 17.0833 26.2188 17.25L25.3125 18.1562ZM3.75 14.5312V12.6562H18.4375V14.5312H3.75ZM3.75 9.375V7.5H18.4375V9.375H3.75Z"
+                                      fill="black" fill-opacity="0.5"/>
+                            </svg>
+
+                        </button>
+                    </td>
+                    <td class="table__cell table__cell_action">
+                        <button class="button button_size_small button_type_outline">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5292 19.5125L14 15.9833L17.5 19.5125L18.8708 18.1125L15.4 14.5833L18.8708 11.0542L17.5 9.65416L14 13.1833L10.5292 9.65416L9.12916 11.0542L12.6292 14.5833L9.12916 18.1125L10.5292 19.5125ZM7.61249 24.7333C7.14582 24.7333 6.73749 24.5583 6.38749 24.2083C6.03749 23.8583 5.86249 23.45 5.86249 22.9833V6.35833H4.66666V4.60833H10.15V3.73333H17.85V4.60833H23.3333V6.35833H22.1375V22.9833C22.1375 23.45 21.9625 23.8583 21.6125 24.2083C21.2625 24.5583 20.8542 24.7333 20.3875 24.7333H7.61249ZM20.3875 6.35833H7.61249V22.9833H20.3875V6.35833Z"
+                                      fill="black" fill-opacity="0.5"/>
+                            </svg>
+
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__cell">Buy-the-tickets</td>
+                    <td class="table__cell table__cell_wide">at-cheapticketscomshanghai</td>
+                    <td class="table__cell table__cell_centered">Travel</td>
+                    <td class="table__cell table__cell_centered">data</td>
+                    <td class="table__cell table__cell_centered">Medium</td>
+                    <td class="table__cell table__cell_centered">100%</td>
+                    <td class="table__cell table__cell_action">
+                        <button class="button button_size_small button_type_outline">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 26.25V24.0312L21.75 17.2812L23.9688 19.5L17.2188 26.25H15ZM3.75 19.6875V17.8125H13.125V19.6875H3.75ZM25.3125 18.1562L23.0938 15.9375L24 15.0312C24.1667 14.8646 24.3854 14.7812 24.6563 14.7812C24.9271 14.7812 25.1458 14.8646 25.3125 15.0312L26.2188 15.9375C26.3854 16.1042 26.4688 16.3229 26.4688 16.5938C26.4688 16.8646 26.3854 17.0833 26.2188 17.25L25.3125 18.1562ZM3.75 14.5312V12.6562H18.4375V14.5312H3.75ZM3.75 9.375V7.5H18.4375V9.375H3.75Z"
+                                      fill="black" fill-opacity="0.5"/>
+                            </svg>
+
+                        </button>
+                    </td>
+                    <td class="table__cell table__cell_action">
+                        <button class="button button_size_small button_type_outline">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5292 19.5125L14 15.9833L17.5 19.5125L18.8708 18.1125L15.4 14.5833L18.8708 11.0542L17.5 9.65416L14 13.1833L10.5292 9.65416L9.12916 11.0542L12.6292 14.5833L9.12916 18.1125L10.5292 19.5125ZM7.61249 24.7333C7.14582 24.7333 6.73749 24.5583 6.38749 24.2083C6.03749 23.8583 5.86249 23.45 5.86249 22.9833V6.35833H4.66666V4.60833H10.15V3.73333H17.85V4.60833H23.3333V6.35833H22.1375V22.9833C22.1375 23.45 21.9625 23.8583 21.6125 24.2083C21.2625 24.5583 20.8542 24.7333 20.3875 24.7333H7.61249ZM20.3875 6.35833H7.61249V22.9833H20.3875V6.35833Z"
+                                      fill="black" fill-opacity="0.5"/>
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
