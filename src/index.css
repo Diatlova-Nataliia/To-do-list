@@ -8,8 +8,10 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     font-family: "Jost", sans-serif;
+    padding: 100px 20px;
+    box-sizing: border-box;
 }
 
 .page-container {
@@ -18,6 +20,10 @@ body {
     border-radius: 30px;
     border: solid 1px;
     padding: 50px;
+}
+
+.page-container_main {
+    width: 100%;
 }
 
 .page-container__header {
@@ -48,7 +54,7 @@ body {
     min-width: 450px;
 }
 
-.toolbar__main-button:visited{
+.button_no-decoration:visited{
     color: inherit;
 }
 
@@ -108,7 +114,7 @@ body {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 0 30px;
-    table-layout: fixed;
+    table-layout: auto;
     width: 100%;
 
 }
@@ -134,8 +140,17 @@ body {
     padding: 10px 0;
 }
 
+.table__cell_checkbox {
+    width: 20px;
+    padding-top: 12px;
+}
+
 .table__cell_wide {
     width: 20%;
+}
+
+.table__cell_empty {
+    font-size: 20px;
 }
 
 .page-form {

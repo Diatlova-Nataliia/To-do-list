@@ -15,7 +15,7 @@
 <div class="page-container">
     <h2 class="page-container__header">React To-Do List</h2>
     <div class="page-container__content">
-        <form class="page-form">
+        <form class="page-form" id="data-form">
             <h3 class="page-form__header">Add a new to-do</h3>
 
             <div class="input">
@@ -73,9 +73,8 @@
                 <div class="field">
                     <label class="field__label" for="priority">Priority</label>
                     <select id="priority" name="priority" class="field__control select__select">
-                        <option value="" disabled selected>select from dropdown</option>
                         <option value="high">High</option>
-                        <option value="middle">Middle</option>
+                        <option value="middle" selected>Middle</option>
                         <option value="low">Low</option>
                     </select>
                 </div>
@@ -85,20 +84,20 @@
             <div class="range">
                 <div class="page-form__input">
                 <div class="field">
-                    <label class="field__label" for="range">Fulfillment</label>
-                    <input id="range" name="range" class="field__control range__input" type="range">
+                    <label class="field__label" for="fulfillment">%</label>
+                    <input id="fulfillment" name="fulfillment" class="field__control range__input" type="range" min="0" max="100" value="90" step="10">
                 </div>
             </div>
             </div>
 
             <div class="page-form__actions">
-                <button class="button button_active page-form__button">Save</button>
+                <button class="button button_active page-form__button" id="save-btn">Save</button>
                 <button class="button button_lined page-form__button">Cancel</button>
             </div>
 </form>
 </div>
 </div>
-<script src="script.js"></script>
+<script src="form.js"></script>
 </body>
 </html>
 
