@@ -54,10 +54,6 @@ body {
     min-width: 450px;
 }
 
-.button_no-decoration:visited{
-    color: inherit;
-}
-
 .toolbar__secondary-button {
     min-width: 180px;
 }
@@ -79,7 +75,11 @@ body {
     text-decoration: none;
 }
 
-.button_active {
+.button:visited {
+    color: inherit;
+}
+
+.button_active, .button_active:visited {
     background-color: #517ff6;
     color: #fff;
 }
