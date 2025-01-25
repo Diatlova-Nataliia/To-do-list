@@ -37,7 +37,7 @@ function renderButtons() {
   toolbarRight.innerHTML = linksData
     .map(
       (link) =>
-        `<a href="index.html?${STATUS_PARAM_NAME}=${link.status}" data-status=${link.status} class="button ${window.getButtonClass(statusParam, link.status)} toolbar__secondary-button link">${link.text}</a>
+        `<a href="index.html?${STATUS_PARAM_NAME}=${link.status}" data-status=${link.status} class="button ${getButtonClass(statusParam, link.status)} toolbar__secondary-button link">${link.text}</a>
         `,
     )
     .join("");
