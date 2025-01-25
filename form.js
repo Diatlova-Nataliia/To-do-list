@@ -3,7 +3,7 @@ import { getUrlParam } from "./utilities";
 
 const taskApi = new TaskApi();
 const form = document.getElementById("data-form");
-const editedId = Number(window.getUrlParam("id"));
+const editedId = Number(getUrlParam("id"));
 
 if (editedId) {
   window.fillForm(editedId);

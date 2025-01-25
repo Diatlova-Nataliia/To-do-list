@@ -27,7 +27,7 @@ function renderButtons() {
     { status: STATUS_PARAM_TODO_VALUE, text: "To-do" },
     { status: STATUS_PARAM_COMPLETED_VALUE, text: "Completed" },
   ];
-  const statusParam = window.getUrlParam(STATUS_PARAM_NAME);
+  const statusParam = getUrlParam(STATUS_PARAM_NAME);
   function getButtonClass(currentStatus, linkStatus) {
     return currentStatus === linkStatus ||
       (currentStatus === null && linkStatus === STATUS_PARAM_ALL_VALUE)
