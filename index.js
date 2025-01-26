@@ -53,6 +53,7 @@ function renderButtons() {
   });
 }
 
+window.handleDeleteClick = handleDeleteClick;
 function handleDeleteClick(taskId) {
   taskApi.delete(taskId);
   render();
@@ -99,7 +100,7 @@ function getTableRow(task) {
         </a>
     </td>
     <td class="table__cell table__cell_action">
-        <button class="button button_size_small button_type_outline" onclick="window.handleDeleteClick(${task.id})">
+        <button class="button button_size_small button_type_outline" onclick="handleDeleteClick(${task.id})">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.5292 19.5125L14 15.9833L17.5 19.5125L18.8708 18.1125L15.4 14.5833L18.8708 11.0542L17.5 9.65416L14 13.1833L10.5292 9.65416L9.12916 11.0542L12.6292 14.5833L9.12916 18.1125L10.5292 19.5125ZM7.61249 24.7333C7.14582 24.7333 6.73749 24.5583 6.38749 24.2083C6.03749 23.8583 5.86249 23.45 5.86249 22.9833V6.35833H4.66666V4.60833H10.15V3.73333H17.85V4.60833H23.3333V6.35833H22.1375V22.9833C22.1375 23.45 21.9625 23.8583 21.6125 24.2083C21.2625 24.5583 20.8542 24.7333 20.3875 24.7333H7.61249ZM20.3875 6.35833H7.61249V22.9833H20.3875V6.35833Z"
                       fill="black" fill-opacity="0.5"/>
@@ -119,18 +120,13 @@ function getEmptyTableRow() {
 }
 
 function render() {
-  window.renderButtons();
-  window.renderRows();
+  renderButtons();
+  renderRows();
 }
 
 render();
 
 Object.assign(window, {
-  renderRows,
-  renderButtons,
-  getButtonClass,
-  handleDeleteClick,
   handleCheckboxClick,
   getEmptyTableRow,
-  render,
 });

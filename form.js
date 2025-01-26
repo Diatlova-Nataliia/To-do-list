@@ -6,7 +6,7 @@ const form = document.getElementById("data-form");
 const editedId = Number(getUrlParam("id"));
 
 if (editedId) {
-  window.fillForm(editedId);
+  fillForm(editedId);
 }
 
 form.addEventListener("submit", function (event) {
@@ -35,7 +35,3 @@ function fillForm(taskId) {
     }
   }
 }
-
-Object.assign(window, {
-  fillForm,
-});
