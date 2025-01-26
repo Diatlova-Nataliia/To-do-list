@@ -1,5 +1,5 @@
-import { TaskApi } from "/api.js";
-import { getUrlParam } from "/utilities.js";
+import { TaskApi } from "./api.js";
+import { getUrlParam } from "./utilities.js";
 
 const taskApi = new TaskApi();
 const form = document.getElementById("data-form");
