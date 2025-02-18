@@ -1,0 +1,15 @@
+.field {
+  &__label {
+    font-size: 24px;
+    line-height: 33px;
+    width: 165px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__control {
+    width: 330px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+

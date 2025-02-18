@@ -1,0 +1,27 @@
+.page-form {
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 30px 50px 62px;
+
+  &__header {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  &__input {
+    margin-bottom: 33px;
+  }
+
+  &__actions {
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  &__button {
+    min-width: 215px;
+  }
+}

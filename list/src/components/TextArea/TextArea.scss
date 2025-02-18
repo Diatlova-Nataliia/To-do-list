@@ -1,0 +1,11 @@
+textarea {
+  font-family: "Jost", sans-serif;
+}
+
+.textarea {
+  &__textarea {
+    box-sizing: border-box;
+    resize: vertical;
+    padding: 4px 0 0 8px;
+  }
+}
