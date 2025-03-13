@@ -29,7 +29,6 @@ const Input: React.FC<InputProps> = ({
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onChange(name, event.target.value);
   };
-  console.log(value);
   if (typeof value === "number") {
     return (
       <input
