@@ -1,9 +1,11 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useEffect } from "react";
 import Field from "../Field/Field.tsx";
 import "./Form.scss";
 import Button from "../Button/Button.tsx";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { TaskApi } from "../../api/tasks.ts";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState, RootState } from "../../store.ts";
+import { addTask, updateTask } from "../../tasksSlice.ts";
 
 const selectOptions: { value: string; name: string }[] = [
   { value: "low", name: "Low" },
@@ -76,23 +78,24 @@ export const formFields = [
 
 export type FieldName = (typeof formFields)[number]["name"];
 
-const taskApi = new TaskApi();
-
 const Form = () => {
+  const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
   const editedId = Number(searchParams.get("id"));
-  const [formValues, setFormValues] = React.useState(() =>
-    editedId
-      ? taskApi.read(editedId)
-      : {
-          name: "",
-          description: "",
-          category: "",
-          date: "",
-          time: "",
-          priority: "",
-          fulfillment: 50,
-        },
+  const task = useSelector((state: RootState) =>
+    state.tasks.find((task) => task.id === editedId),
+  );
+  const [formValues, setFormValues] = React.useState(
+    () =>
+      (editedId && task) || {
+        name: "",
+        description: "",
+        category: "",
+        date: "",
+        time: "",
+        priority: "",
+        fulfillment: 50,
+      },
   );
 
   const navigate = useNavigate();
@@ -104,11 +107,32 @@ const Form = () => {
     });
   }
 
+  const handleAddTask = () => {
+    if (editedId) {
+      dispatch(updateTask({ ...formValues, id: editedId }));
+    } else {
+      const id = generateId();
+      dispatch(addTask({ ...formValues, id }));
+    }
+  };
+
+  const currentTasks = useSelector((state: IRootState) => state.tasks);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(currentTasks));
+  }, [currentTasks]);
+
+  function generateId() {
+    const currentIdJson = localStorage.getItem("currentId");
+    const currentId = currentIdJson ? parseInt(currentIdJson) : 0;
+    const newId = currentId + 1;
+    localStorage.setItem("currentId", JSON.stringify(currentId + 1));
+    return newId;
+  }
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    editedId
-      ? taskApi.update(Number(editedId), formValues)
-      : taskApi.create(formValues);
+    handleAddTask();
     navigate("/");
   };
 
