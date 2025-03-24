@@ -14,7 +14,7 @@ const TaskTableRow = ({
   onCheckChange,
 }: TableRowProps) => {
   return (
-    <tr>
+    <tr className="table__row">
       <td className="table__cell table__cell_action table__cell_checkbox">
         <input
           type="checkbox"

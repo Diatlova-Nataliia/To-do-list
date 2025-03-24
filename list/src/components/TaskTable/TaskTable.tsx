@@ -11,13 +11,15 @@ import TaskTableRow from "../TaskTableRow/TaskTableRow.tsx";
 import TaskTableHeaderRow from "../TaskTableHeaderRow/TaskTableHeaderRow.tsx";
 import TaskTableEmptyRow from "../TaskTableEmptyRow/TaskTableEmptyRow.tsx";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteTask, toggleTask, updateTask } from "../../tasksSlice.ts";
-import { IRootState } from "../../store.ts";
+import { deleteTask, toggleTask } from "../../tasksSlice.ts";
+import { RootState } from "../../store.ts";
+import { isMobile } from "../MainPage/MainPage.tsx";
+import MobileCardsContainer from "../MobileCardsContainer/MobileCardsContainer.tsx";
 
 const TaskTable = ({}) => {
   const [searchParams] = useSearchParams();
   const statusParam = searchParams.get(STATUS_PARAM_NAME);
-  const tasks = useSelector((state: IRootState) => state.tasks);
+  const tasks = useSelector((state: RootState) => state.tasks);
 
   const tasksToRender = React.useMemo(() => {
     switch (statusParam) {
@@ -36,10 +38,9 @@ const TaskTable = ({}) => {
     (taskId?: number) => {
       if (taskId) {
         dispatch(toggleTask(taskId));
-        dispatch(updateTask({ id: taskId }));
       }
     },
-    [tasks],
+    [dispatch],
   );
 
   const handleDeleteClick = React.useCallback(
@@ -51,10 +52,19 @@ const TaskTable = ({}) => {
   );
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    const timeout = setTimeout(() => {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, 500); // ✅ Запись через 500 мс уменьшает нагрузку
+    return () => clearTimeout(timeout);
   }, [tasks]);
 
-  return (
+  return isMobile ? (
+    <MobileCardsContainer
+      tasks={tasks}
+      onDeleteClick={handleDeleteClick}
+      onCheckChange={handleCheckboxChange}
+    />
+  ) : (
     <>
       <table className="table">
         <tbody>

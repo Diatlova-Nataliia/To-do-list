@@ -1,0 +1,39 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+
+  &__right {
+    gap: 20px;
+    display: flex;
+  }
+
+  &__main-button {
+    min-width: 450px;
+  }
+
+  &__secondary-button {
+    min-width: 180px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .toolbar {
+    gap: 5%;
+
+    &__right {
+      position: relative;
+      display: inline-block;
+      width: 7em;
+    }
+
+    &__main-button {
+      min-width: 200px;
+    }
+
+    &__secondary-button {
+      min-width: 90px;
+    }
+
+  }
+}

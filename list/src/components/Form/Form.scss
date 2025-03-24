@@ -22,6 +22,34 @@
   }
 
   &__button {
-    min-width: 215px;
+    width: 215px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .page-form {
+    box-sizing: border-box;
+    display: grid;
+    place-content: start;
+    grid-template-columns: 1fr;
+    padding: 0.8em;
+    width: 90vw;
+
+    &__header {
+      padding-bottom: 3%;
+      font-size: 1.8em;
+    }
+
+    &__input {
+      margin-bottom: 2%;
+    }
+
+    &__actions {
+      margin-top: 10%;
+      gap: 2%;
+    }
+      &__button {
+        width: 40%;
+      }
+    }
+  }

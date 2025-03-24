@@ -1,0 +1,84 @@
+.table {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0 30px;
+  table-layout: auto;
+  width: 100%;
+
+  &__cell {
+    font-weight: normal;
+    padding: 10px 30px;
+    vertical-align: top;
+
+    &_header {
+      font-size: 24px;
+      height: 35px;
+      line-height: 35px;
+    }
+
+    &_centered {
+      text-align: center;
+    }
+
+    &_action {
+      width: 42px;
+      padding: 10px 0;
+    }
+
+    &_checkbox {
+      width: 20px;
+      padding-top: 12px;
+    }
+
+    &_wide {
+      width: 20%;
+    }
+
+    &_empty {
+      font-size: 20px;
+    }
+  }
+}
+
+/*@media only screen and (max-width: 600px) {
+  .table {
+    border: 0;
+
+    &__row{
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+
+    &__cell {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+
+      &::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      :last-child {
+        border-bottom: 0;
+      }
+
+      &_header {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+    }
+  }
+
+
+}*/

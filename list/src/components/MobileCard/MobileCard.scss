@@ -1,0 +1,41 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.75);
+  height: auto;
+  width: 80vw;
+  margin-right: auto;
+  border-radius: 30px;
+  padding: 0.6em 1em;
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr max-content;
+  grid-auto-rows: auto;
+  align-items: start;
+  margin-top: 2%;
+
+  &_closed{
+    max-height: 12vh;
+  }
+
+  &__checkbox {
+    grid-column: 1;
+  }
+
+  &__label {
+    grid-column: 2;
+    padding-right: 0.2em;
+    text-align: justify;
+  }
+
+  &__value {
+    grid-column: 3;
+    word-break: break-all;/* Значения во второй колонке */
+  }
+
+  &__buttons {
+    grid-column: 4; /* Кнопки в третьей колонке */
+    display: flex;
+    justify-content: flex-end; /* Выравниваем кнопки вправо */
+  }
+}
+
+
+

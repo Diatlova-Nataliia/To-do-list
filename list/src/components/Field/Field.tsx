@@ -42,6 +42,11 @@ const Field: React.FC<FieldProps> = ({ field, value, onChange, ...props }) => {
         max: field.max,
         step: field.step,
       })}
+      {...((field.type === "text" ||
+        field.type === "date" ||
+        field.type === "time") && {
+        required: field.required,
+      })}
     />
   );
 
