@@ -8,7 +8,7 @@ import store from "./store.ts";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Router>
+    <Router basename="/To-do-list/">
       <Provider store={store}>
         <App />
       </Provider>
