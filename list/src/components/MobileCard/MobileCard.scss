@@ -27,13 +27,13 @@
 
   &__value {
     grid-column: 3;
-    word-break: break-all;/* Значения во второй колонке */
+    word-break: break-all;
   }
 
   &__buttons {
-    grid-column: 4; /* Кнопки в третьей колонке */
+    grid-column: 4;
     display: flex;
-    justify-content: flex-end; /* Выравниваем кнопки вправо */
+    justify-content: flex-end;
   }
 }
 
