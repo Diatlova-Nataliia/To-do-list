@@ -12,6 +12,7 @@ interface InputProps {
   value?: string | number;
   step?: number;
   type?: string;
+  required?: boolean;
   onChange: (name: FieldName, value: string | number) => void;
 }
 
@@ -25,6 +26,7 @@ const Input: React.FC<InputProps> = ({
   step,
   type,
   onChange,
+  required,
 }) => {
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onChange(name, event.target.value);
@@ -51,6 +53,7 @@ const Input: React.FC<InputProps> = ({
       name={name}
       placeholder={placeholder}
       id={name}
+      required={required}
       value={value ?? ""}
       onChange={handleInputChange}
     />

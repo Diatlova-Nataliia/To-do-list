@@ -24,6 +24,7 @@ export interface TextField extends BaseField {
   min?: number;
   max?: number;
   step?: number;
+  required?: boolean;
 }
 
 export interface TextareaField extends BaseField {
@@ -44,6 +45,7 @@ export const formFields = [
     name: "name",
     label: "Name",
     placeholder: "name for the task you’re going to do",
+    required: true,
   },
   {
     type: "textarea",
@@ -58,8 +60,8 @@ export const formFields = [
     label: "Category",
     placeholder: "e.g. household, school, work",
   },
-  { type: "date", name: "date", label: "Date" },
-  { type: "time", name: "time", label: "Time" },
+  { type: "date", name: "date", label: "Date", required: true },
+  { type: "time", name: "time", label: "Time", required: true },
   {
     type: "select",
     name: "priority",
@@ -152,7 +154,7 @@ const Form = () => {
         <Button className="page-form__button" active={true}>
           Save
         </Button>
-        <Button className="page-form__button" type="outline">
+        <Button className="page-form__button" type="outline" to="/">
           Cancel
         </Button>
       </div>

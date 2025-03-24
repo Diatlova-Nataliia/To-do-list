@@ -1,0 +1,51 @@
+.page-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  max-width: 1200px;
+  border-radius: 30px;
+  border: solid 1px;
+  padding: 50px;
+
+  &_main {
+    width: 100%;
+  }
+
+  &__header {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 42px;
+    font-weight: bold;
+  }
+
+  &__toolbar {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-container {
+    display: grid;
+    place-content: start center;
+    padding: 0.6em;
+    box-sizing: border-box;
+    width: 95vw;
+
+
+
+    &_main {
+      height: auto;
+      border-radius: 30px;
+      border: solid 1px;
+    }
+
+    &__header {
+      color: #fff;
+      font-size: 40px;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 5%;
+      font-weight: bold;
+    }
+  }
+}
