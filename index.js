@@ -19,6 +19,7 @@ function renderRows() {
     const rows = tasksToRender.map(getTableRow);
     table.innerHTML = rows.join("");
   }
+  console.log(statusParam);
 }
 
 function renderButtons() {
